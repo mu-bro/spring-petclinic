@@ -4,16 +4,30 @@ INSERT IGNORE INTO vets VALUES (3, 'Linda', 'Douglas');
 INSERT IGNORE INTO vets VALUES (4, 'Rafael', 'Ortega');
 INSERT IGNORE INTO vets VALUES (5, 'Henry', 'Stevens');
 INSERT IGNORE INTO vets VALUES (6, 'Sharon', 'Jenkins');
+INSERT IGNORE INTO vets VALUES (7, 'Michael', 'Torres');
+INSERT IGNORE INTO vets VALUES (8, 'Sarah', 'Kim');
+INSERT IGNORE INTO vets VALUES (9, 'Robert', 'Chen');
+INSERT IGNORE INTO vets VALUES (10, 'Patricia', 'Walsh');
+INSERT IGNORE INTO vets VALUES (11, 'Thomas', 'Garcia');
+INSERT IGNORE INTO vets VALUES (12, 'Jennifer', 'Lee');
 
 INSERT IGNORE INTO specialties VALUES (1, 'radiology');
 INSERT IGNORE INTO specialties VALUES (2, 'surgery');
 INSERT IGNORE INTO specialties VALUES (3, 'dentistry');
+INSERT IGNORE INTO specialties VALUES (4, 'cardiology');
+INSERT IGNORE INTO specialties VALUES (5, 'neurology');
+INSERT IGNORE INTO specialties VALUES (6, 'ophthalmology');
 
 INSERT IGNORE INTO vet_specialties VALUES (2, 1);
 INSERT IGNORE INTO vet_specialties VALUES (3, 2);
 INSERT IGNORE INTO vet_specialties VALUES (3, 3);
 INSERT IGNORE INTO vet_specialties VALUES (4, 2);
 INSERT IGNORE INTO vet_specialties VALUES (5, 1);
+INSERT IGNORE INTO vet_specialties VALUES (8, 4);
+INSERT IGNORE INTO vet_specialties VALUES (9, 5);
+INSERT IGNORE INTO vet_specialties VALUES (9, 6);
+INSERT IGNORE INTO vet_specialties VALUES (10, 4);
+INSERT IGNORE INTO vet_specialties VALUES (11, 5);
 
 INSERT IGNORE INTO types VALUES (1, 'cat');
 INSERT IGNORE INTO types VALUES (2, 'dog');
@@ -21,6 +35,12 @@ INSERT IGNORE INTO types VALUES (3, 'lizard');
 INSERT IGNORE INTO types VALUES (4, 'snake');
 INSERT IGNORE INTO types VALUES (5, 'bird');
 INSERT IGNORE INTO types VALUES (6, 'hamster');
+INSERT IGNORE INTO types VALUES (7, 'rabbit');
+INSERT IGNORE INTO types VALUES (8, 'turtle');
+INSERT IGNORE INTO types VALUES (9, 'fish');
+INSERT IGNORE INTO types VALUES (10, 'guinea pig');
+INSERT IGNORE INTO types VALUES (11, 'parrot');
+INSERT IGNORE INTO types VALUES (12, 'ferret');
 
 INSERT IGNORE INTO owners VALUES (1, 'George', 'Franklin', '110 W. Liberty St.', 'Madison', '6085551023');
 INSERT IGNORE INTO owners VALUES (2, 'Betty', 'Davis', '638 Cardinal Ave.', 'Sun Prairie', '6085551749');
@@ -32,6 +52,16 @@ INSERT IGNORE INTO owners VALUES (7, 'Jeff', 'Black', '1450 Oak Blvd.', 'Monona'
 INSERT IGNORE INTO owners VALUES (8, 'Maria', 'Escobito', '345 Maple St.', 'Madison', '6085557683');
 INSERT IGNORE INTO owners VALUES (9, 'David', 'Schroeder', '2749 Blackhawk Trail', 'Madison', '6085559435');
 INSERT IGNORE INTO owners VALUES (10, 'Carlos', 'Estaban', '2335 Independence La.', 'Waunakee', '6085555487');
+INSERT IGNORE INTO owners VALUES (11, 'Alice', 'Thompson', '2100 Park Ave.', 'Madison', '6085551111');
+INSERT IGNORE INTO owners VALUES (12, 'Robert', 'Wilson', '456 Oak St.', 'Sun Prairie', '6085552222');
+INSERT IGNORE INTO owners VALUES (13, 'Linda', 'Martinez', '789 Pine Rd.', 'McFarland', '6085553333');
+INSERT IGNORE INTO owners VALUES (14, 'Frank', 'Johnson', '321 Elm St.', 'Windsor', '6085554444');
+INSERT IGNORE INTO owners VALUES (15, 'Susan', 'Brown', '654 Maple Ave.', 'Madison', '6085555555');
+INSERT IGNORE INTO owners VALUES (16, 'Michael', 'Taylor', '987 Cedar Ln.', 'Monona', '6085556666');
+INSERT IGNORE INTO owners VALUES (17, 'Karen', 'Anderson', '147 Birch Blvd.', 'Monona', '6085557777');
+INSERT IGNORE INTO owners VALUES (18, 'Steven', 'White', '258 Walnut Way', 'Madison', '6085558888');
+INSERT IGNORE INTO owners VALUES (19, 'Nancy', 'Harris', '369 Spruce St.', 'Madison', '6085559999');
+INSERT IGNORE INTO owners VALUES (20, 'Paul', 'Jackson', '741 Chestnut Dr.', 'Waunakee', '6085550000');
 
 INSERT IGNORE INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (1, 'Leo', '2000-09-07', 'Maine Coon', 1, 1);
 INSERT IGNORE INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (2, 'Basil', '2002-08-06', 'Syrian Hamster', 6, 2);
@@ -46,8 +76,25 @@ INSERT IGNORE INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES 
 INSERT IGNORE INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (11, 'Freddy', '2000-03-09', 'Parakeet', 5, 9);
 INSERT IGNORE INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (12, 'Lucky', '2000-06-24', 'Golden Retriever', 2, 10);
 INSERT IGNORE INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (13, 'Sly', '2002-06-08', 'Bengal', 1, 10);
+INSERT IGNORE INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (14, 'Whiskers', '2005-03-15', 'Tabby', 1, 11);
+INSERT IGNORE INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (15, 'Buddy', '2004-07-22', 'German Shepherd', 2, 12);
+INSERT IGNORE INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (16, 'Spike', '2006-01-10', 'Corn Snake', 4, 13);
+INSERT IGNORE INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (17, 'Tweety', '2003-05-05', 'Canary', 5, 14);
+INSERT IGNORE INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (18, 'Nibbles', '2007-09-12', 'Dutch Rabbit', 7, 15);
+INSERT IGNORE INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (19, 'Goldie', '2008-02-28', 'Goldfish', 9, 16);
+INSERT IGNORE INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (20, 'Charlie', '2005-11-03', 'Poodle', 2, 16);
+INSERT IGNORE INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (21, 'Mochi', '2009-06-15', 'Rex Rabbit', 7, 17);
+INSERT IGNORE INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (22, 'Pepper', '2006-08-20', 'Leopard Gecko', 3, 18);
+INSERT IGNORE INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (23, 'Coco', '2004-12-01', 'African Grey', 11, 19);
+INSERT IGNORE INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (24, 'Rocky', '2003-04-18', 'Rottweiler', 2, 20);
+INSERT IGNORE INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (25, 'Daisy', '2007-07-07', 'Holland Lop', 7, 20);
+INSERT IGNORE INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (26, 'Shadow', '2005-10-31', 'American Shorthair', 1, 11);
 
 INSERT IGNORE INTO visits VALUES (1, 7, '2010-03-04', 'rabies shot');
 INSERT IGNORE INTO visits VALUES (2, 8, '2011-03-04', 'rabies shot');
 INSERT IGNORE INTO visits VALUES (3, 8, '2009-06-04', 'neutered');
 INSERT IGNORE INTO visits VALUES (4, 7, '2008-09-04', 'spayed');
+INSERT IGNORE INTO visits VALUES (5, 14, '2015-03-01', 'annual checkup');
+INSERT IGNORE INTO visits VALUES (6, 15, '2016-04-15', 'vaccination');
+INSERT IGNORE INTO visits VALUES (7, 16, '2017-05-10', 'health examination');
+INSERT IGNORE INTO visits VALUES (8, 14, '2015-06-20', 'dental cleaning');

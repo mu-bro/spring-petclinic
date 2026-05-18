@@ -4,16 +4,30 @@ INSERT INTO vets VALUES (default, 'Linda', 'Douglas');
 INSERT INTO vets VALUES (default, 'Rafael', 'Ortega');
 INSERT INTO vets VALUES (default, 'Henry', 'Stevens');
 INSERT INTO vets VALUES (default, 'Sharon', 'Jenkins');
+INSERT INTO vets VALUES (default, 'Michael', 'Torres');
+INSERT INTO vets VALUES (default, 'Sarah', 'Kim');
+INSERT INTO vets VALUES (default, 'Robert', 'Chen');
+INSERT INTO vets VALUES (default, 'Patricia', 'Walsh');
+INSERT INTO vets VALUES (default, 'Thomas', 'Garcia');
+INSERT INTO vets VALUES (default, 'Jennifer', 'Lee');
 
 INSERT INTO specialties VALUES (default, 'radiology');
 INSERT INTO specialties VALUES (default, 'surgery');
 INSERT INTO specialties VALUES (default, 'dentistry');
+INSERT INTO specialties VALUES (default, 'cardiology');
+INSERT INTO specialties VALUES (default, 'neurology');
+INSERT INTO specialties VALUES (default, 'ophthalmology');
 
 INSERT INTO vet_specialties VALUES (2, 1);
 INSERT INTO vet_specialties VALUES (3, 2);
 INSERT INTO vet_specialties VALUES (3, 3);
 INSERT INTO vet_specialties VALUES (4, 2);
 INSERT INTO vet_specialties VALUES (5, 1);
+INSERT INTO vet_specialties VALUES (8, 4);
+INSERT INTO vet_specialties VALUES (9, 5);
+INSERT INTO vet_specialties VALUES (9, 6);
+INSERT INTO vet_specialties VALUES (10, 4);
+INSERT INTO vet_specialties VALUES (11, 5);
 
 INSERT INTO types VALUES (default, 'cat');
 INSERT INTO types VALUES (default, 'dog');
@@ -21,6 +35,12 @@ INSERT INTO types VALUES (default, 'lizard');
 INSERT INTO types VALUES (default, 'snake');
 INSERT INTO types VALUES (default, 'bird');
 INSERT INTO types VALUES (default, 'hamster');
+INSERT INTO types VALUES (default, 'rabbit');
+INSERT INTO types VALUES (default, 'turtle');
+INSERT INTO types VALUES (default, 'fish');
+INSERT INTO types VALUES (default, 'guinea pig');
+INSERT INTO types VALUES (default, 'parrot');
+INSERT INTO types VALUES (default, 'ferret');
 
 INSERT INTO owners VALUES (default, 'George', 'Franklin', '110 W. Liberty St.', 'Madison', '6085551023');
 INSERT INTO owners VALUES (default, 'Betty', 'Davis', '638 Cardinal Ave.', 'Sun Prairie', '6085551749');
@@ -32,6 +52,16 @@ INSERT INTO owners VALUES (default, 'Jeff', 'Black', '1450 Oak Blvd.', 'Monona',
 INSERT INTO owners VALUES (default, 'Maria', 'Escobito', '345 Maple St.', 'Madison', '6085557683');
 INSERT INTO owners VALUES (default, 'David', 'Schroeder', '2749 Blackhawk Trail', 'Madison', '6085559435');
 INSERT INTO owners VALUES (default, 'Carlos', 'Estaban', '2335 Independence La.', 'Waunakee', '6085555487');
+INSERT INTO owners VALUES (default, 'Alice', 'Thompson', '2100 Park Ave.', 'Madison', '6085551111');
+INSERT INTO owners VALUES (default, 'Robert', 'Wilson', '456 Oak St.', 'Sun Prairie', '6085552222');
+INSERT INTO owners VALUES (default, 'Linda', 'Martinez', '789 Pine Rd.', 'McFarland', '6085553333');
+INSERT INTO owners VALUES (default, 'Frank', 'Johnson', '321 Elm St.', 'Windsor', '6085554444');
+INSERT INTO owners VALUES (default, 'Susan', 'Brown', '654 Maple Ave.', 'Madison', '6085555555');
+INSERT INTO owners VALUES (default, 'Michael', 'Taylor', '987 Cedar Ln.', 'Monona', '6085556666');
+INSERT INTO owners VALUES (default, 'Karen', 'Anderson', '147 Birch Blvd.', 'Monona', '6085557777');
+INSERT INTO owners VALUES (default, 'Steven', 'White', '258 Walnut Way', 'Madison', '6085558888');
+INSERT INTO owners VALUES (default, 'Nancy', 'Harris', '369 Spruce St.', 'Madison', '6085559999');
+INSERT INTO owners VALUES (default, 'Paul', 'Jackson', '741 Chestnut Dr.', 'Waunakee', '6085550000');
 
 INSERT INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (default, 'Leo', '2010-09-07', 'Maine Coon', 1, 1);
 INSERT INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (default, 'Basil', '2012-08-06', 'Syrian Hamster', 6, 2);
@@ -46,8 +76,25 @@ INSERT INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (defaul
 INSERT INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (default, 'Freddy', '2010-03-09', 'Parakeet', 5, 9);
 INSERT INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (default, 'Lucky', '2010-06-24', 'Golden Retriever', 2, 10);
 INSERT INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (default, 'Sly', '2012-06-08', 'Bengal', 1, 10);
+INSERT INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (default, 'Whiskers', '2015-03-15', 'Tabby', 1, 11);
+INSERT INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (default, 'Buddy', '2014-07-22', 'German Shepherd', 2, 12);
+INSERT INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (default, 'Spike', '2016-01-10', 'Corn Snake', 4, 13);
+INSERT INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (default, 'Tweety', '2013-05-05', 'Canary', 5, 14);
+INSERT INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (default, 'Nibbles', '2017-09-12', 'Dutch Rabbit', 7, 15);
+INSERT INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (default, 'Goldie', '2018-02-28', 'Goldfish', 9, 16);
+INSERT INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (default, 'Charlie', '2015-11-03', 'Poodle', 2, 16);
+INSERT INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (default, 'Mochi', '2019-06-15', 'Rex Rabbit', 7, 17);
+INSERT INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (default, 'Pepper', '2016-08-20', 'Leopard Gecko', 3, 18);
+INSERT INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (default, 'Coco', '2014-12-01', 'African Grey', 11, 19);
+INSERT INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (default, 'Rocky', '2013-04-18', 'Rottweiler', 2, 20);
+INSERT INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (default, 'Daisy', '2017-07-07', 'Holland Lop', 7, 20);
+INSERT INTO pets (id, name, birth_date, breed, type_id, owner_id) VALUES (default, 'Shadow', '2015-10-31', 'American Shorthair', 1, 11);
 
 INSERT INTO visits VALUES (default, 7, '2013-01-01', 'rabies shot');
 INSERT INTO visits VALUES (default, 8, '2013-01-02', 'rabies shot');
 INSERT INTO visits VALUES (default, 8, '2013-01-03', 'neutered');
 INSERT INTO visits VALUES (default, 7, '2013-01-04', 'spayed');
+INSERT INTO visits VALUES (default, 14, '2023-03-01', 'annual checkup');
+INSERT INTO visits VALUES (default, 15, '2023-04-15', 'vaccination');
+INSERT INTO visits VALUES (default, 16, '2023-05-10', 'health examination');
+INSERT INTO visits VALUES (default, 14, '2023-06-20', 'dental cleaning');

@@ -4,16 +4,30 @@ INSERT INTO vets (first_name, last_name) SELECT 'Linda', 'Douglas' WHERE NOT EXI
 INSERT INTO vets (first_name, last_name) SELECT 'Rafael', 'Ortega' WHERE NOT EXISTS (SELECT * FROM vets WHERE id=4);
 INSERT INTO vets (first_name, last_name) SELECT 'Henry', 'Stevens' WHERE NOT EXISTS (SELECT * FROM vets WHERE id=5);
 INSERT INTO vets (first_name, last_name) SELECT 'Sharon', 'Jenkins' WHERE NOT EXISTS (SELECT * FROM vets WHERE id=6);
+INSERT INTO vets (first_name, last_name) SELECT 'Michael', 'Torres' WHERE NOT EXISTS (SELECT * FROM vets WHERE id=7);
+INSERT INTO vets (first_name, last_name) SELECT 'Sarah', 'Kim' WHERE NOT EXISTS (SELECT * FROM vets WHERE id=8);
+INSERT INTO vets (first_name, last_name) SELECT 'Robert', 'Chen' WHERE NOT EXISTS (SELECT * FROM vets WHERE id=9);
+INSERT INTO vets (first_name, last_name) SELECT 'Patricia', 'Walsh' WHERE NOT EXISTS (SELECT * FROM vets WHERE id=10);
+INSERT INTO vets (first_name, last_name) SELECT 'Thomas', 'Garcia' WHERE NOT EXISTS (SELECT * FROM vets WHERE id=11);
+INSERT INTO vets (first_name, last_name) SELECT 'Jennifer', 'Lee' WHERE NOT EXISTS (SELECT * FROM vets WHERE id=12);
 
 INSERT INTO specialties (name) SELECT 'radiology' WHERE NOT EXISTS (SELECT * FROM specialties WHERE name='radiology');
-INSERT INTO specialties (name) SELECT 'surgery' WHERE NOT EXISTS (SELECT * FROM specialties WHERE name='surgery'); 
+INSERT INTO specialties (name) SELECT 'surgery' WHERE NOT EXISTS (SELECT * FROM specialties WHERE name='surgery');
 INSERT INTO specialties (name) SELECT 'dentistry' WHERE NOT EXISTS (SELECT * FROM specialties WHERE name='dentistry');
+INSERT INTO specialties (name) SELECT 'cardiology' WHERE NOT EXISTS (SELECT * FROM specialties WHERE name='cardiology');
+INSERT INTO specialties (name) SELECT 'neurology' WHERE NOT EXISTS (SELECT * FROM specialties WHERE name='neurology');
+INSERT INTO specialties (name) SELECT 'ophthalmology' WHERE NOT EXISTS (SELECT * FROM specialties WHERE name='ophthalmology');
 
 INSERT INTO vet_specialties VALUES (2, 1) ON CONFLICT (vet_id, specialty_id) DO NOTHING;
 INSERT INTO vet_specialties VALUES (3, 2) ON CONFLICT (vet_id, specialty_id) DO NOTHING;
 INSERT INTO vet_specialties VALUES (3, 3) ON CONFLICT (vet_id, specialty_id) DO NOTHING;
 INSERT INTO vet_specialties VALUES (4, 2) ON CONFLICT (vet_id, specialty_id) DO NOTHING;
 INSERT INTO vet_specialties VALUES (5, 1) ON CONFLICT (vet_id, specialty_id) DO NOTHING;
+INSERT INTO vet_specialties VALUES (8, 4) ON CONFLICT (vet_id, specialty_id) DO NOTHING;
+INSERT INTO vet_specialties VALUES (9, 5) ON CONFLICT (vet_id, specialty_id) DO NOTHING;
+INSERT INTO vet_specialties VALUES (9, 6) ON CONFLICT (vet_id, specialty_id) DO NOTHING;
+INSERT INTO vet_specialties VALUES (10, 4) ON CONFLICT (vet_id, specialty_id) DO NOTHING;
+INSERT INTO vet_specialties VALUES (11, 5) ON CONFLICT (vet_id, specialty_id) DO NOTHING;
 
 INSERT INTO types (name) SELECT 'cat' WHERE NOT EXISTS (SELECT * FROM types WHERE name='cat');
 INSERT INTO types (name) SELECT 'dog' WHERE NOT EXISTS (SELECT * FROM types WHERE name='dog');
@@ -21,6 +35,12 @@ INSERT INTO types (name) SELECT 'lizard' WHERE NOT EXISTS (SELECT * FROM types W
 INSERT INTO types (name) SELECT 'snake' WHERE NOT EXISTS (SELECT * FROM types WHERE name='snake');
 INSERT INTO types (name) SELECT 'bird' WHERE NOT EXISTS (SELECT * FROM types WHERE name='bird');
 INSERT INTO types (name) SELECT 'hamster' WHERE NOT EXISTS (SELECT * FROM types WHERE name='hamster');
+INSERT INTO types (name) SELECT 'rabbit' WHERE NOT EXISTS (SELECT * FROM types WHERE name='rabbit');
+INSERT INTO types (name) SELECT 'turtle' WHERE NOT EXISTS (SELECT * FROM types WHERE name='turtle');
+INSERT INTO types (name) SELECT 'fish' WHERE NOT EXISTS (SELECT * FROM types WHERE name='fish');
+INSERT INTO types (name) SELECT 'guinea pig' WHERE NOT EXISTS (SELECT * FROM types WHERE name='guinea pig');
+INSERT INTO types (name) SELECT 'parrot' WHERE NOT EXISTS (SELECT * FROM types WHERE name='parrot');
+INSERT INTO types (name) SELECT 'ferret' WHERE NOT EXISTS (SELECT * FROM types WHERE name='ferret');
 
 INSERT INTO owners (first_name, last_name, address, city, telephone) SELECT 'George', 'Franklin', '110 W. Liberty St.', 'Madison', '6085551023' WHERE NOT EXISTS (SELECT * FROM owners WHERE id=1);
 INSERT INTO owners (first_name, last_name, address, city, telephone) SELECT 'Betty', 'Davis', '638 Cardinal Ave.', 'Sun Prairie', '6085551749' WHERE NOT EXISTS (SELECT * FROM owners WHERE id=2);
@@ -32,6 +52,16 @@ INSERT INTO owners (first_name, last_name, address, city, telephone) SELECT 'Jef
 INSERT INTO owners (first_name, last_name, address, city, telephone) SELECT 'Maria', 'Escobito', '345 Maple St.', 'Madison', '6085557683' WHERE NOT EXISTS (SELECT * FROM owners WHERE id=8);
 INSERT INTO owners (first_name, last_name, address, city, telephone) SELECT 'David', 'Schroeder', '2749 Blackhawk Trail', 'Madison', '6085559435' WHERE NOT EXISTS (SELECT * FROM owners WHERE id=9);
 INSERT INTO owners (first_name, last_name, address, city, telephone) SELECT 'Carlos', 'Estaban', '2335 Independence La.', 'Waunakee', '6085555487' WHERE NOT EXISTS (SELECT * FROM owners WHERE id=10);
+INSERT INTO owners (first_name, last_name, address, city, telephone) SELECT 'Alice', 'Thompson', '2100 Park Ave.', 'Madison', '6085551111' WHERE NOT EXISTS (SELECT * FROM owners WHERE id=11);
+INSERT INTO owners (first_name, last_name, address, city, telephone) SELECT 'Robert', 'Wilson', '456 Oak St.', 'Sun Prairie', '6085552222' WHERE NOT EXISTS (SELECT * FROM owners WHERE id=12);
+INSERT INTO owners (first_name, last_name, address, city, telephone) SELECT 'Linda', 'Martinez', '789 Pine Rd.', 'McFarland', '6085553333' WHERE NOT EXISTS (SELECT * FROM owners WHERE id=13);
+INSERT INTO owners (first_name, last_name, address, city, telephone) SELECT 'Frank', 'Johnson', '321 Elm St.', 'Windsor', '6085554444' WHERE NOT EXISTS (SELECT * FROM owners WHERE id=14);
+INSERT INTO owners (first_name, last_name, address, city, telephone) SELECT 'Susan', 'Brown', '654 Maple Ave.', 'Madison', '6085555555' WHERE NOT EXISTS (SELECT * FROM owners WHERE id=15);
+INSERT INTO owners (first_name, last_name, address, city, telephone) SELECT 'Michael', 'Taylor', '987 Cedar Ln.', 'Monona', '6085556666' WHERE NOT EXISTS (SELECT * FROM owners WHERE id=16);
+INSERT INTO owners (first_name, last_name, address, city, telephone) SELECT 'Karen', 'Anderson', '147 Birch Blvd.', 'Monona', '6085557777' WHERE NOT EXISTS (SELECT * FROM owners WHERE id=17);
+INSERT INTO owners (first_name, last_name, address, city, telephone) SELECT 'Steven', 'White', '258 Walnut Way', 'Madison', '6085558888' WHERE NOT EXISTS (SELECT * FROM owners WHERE id=18);
+INSERT INTO owners (first_name, last_name, address, city, telephone) SELECT 'Nancy', 'Harris', '369 Spruce St.', 'Madison', '6085559999' WHERE NOT EXISTS (SELECT * FROM owners WHERE id=19);
+INSERT INTO owners (first_name, last_name, address, city, telephone) SELECT 'Paul', 'Jackson', '741 Chestnut Dr.', 'Waunakee', '6085550000' WHERE NOT EXISTS (SELECT * FROM owners WHERE id=20);
 
 INSERT INTO pets (name, birth_date, breed, type_id, owner_id) SELECT 'Leo', '2000-09-07', 'Maine Coon', 1, 1 WHERE NOT EXISTS (SELECT * FROM pets WHERE id=1);
 INSERT INTO pets (name, birth_date, breed, type_id, owner_id) SELECT 'Basil', '2002-08-06', 'Syrian Hamster', 6, 2 WHERE NOT EXISTS (SELECT * FROM pets WHERE id=2);
@@ -46,8 +76,25 @@ INSERT INTO pets (name, birth_date, breed, type_id, owner_id) SELECT 'Mulligan',
 INSERT INTO pets (name, birth_date, breed, type_id, owner_id) SELECT 'Freddy', '2000-03-09', 'Parakeet', 5, 9 WHERE NOT EXISTS (SELECT * FROM pets WHERE id=11);
 INSERT INTO pets (name, birth_date, breed, type_id, owner_id) SELECT 'Lucky', '2000-06-24', 'Golden Retriever', 2, 10 WHERE NOT EXISTS (SELECT * FROM pets WHERE id=12);
 INSERT INTO pets (name, birth_date, breed, type_id, owner_id) SELECT 'Sly', '2002-06-08', 'Bengal', 1, 10 WHERE NOT EXISTS (SELECT * FROM pets WHERE id=13);
+INSERT INTO pets (name, birth_date, breed, type_id, owner_id) SELECT 'Whiskers', '2005-03-15', 'Tabby', 1, 11 WHERE NOT EXISTS (SELECT * FROM pets WHERE id=14);
+INSERT INTO pets (name, birth_date, breed, type_id, owner_id) SELECT 'Buddy', '2004-07-22', 'German Shepherd', 2, 12 WHERE NOT EXISTS (SELECT * FROM pets WHERE id=15);
+INSERT INTO pets (name, birth_date, breed, type_id, owner_id) SELECT 'Spike', '2006-01-10', 'Corn Snake', 4, 13 WHERE NOT EXISTS (SELECT * FROM pets WHERE id=16);
+INSERT INTO pets (name, birth_date, breed, type_id, owner_id) SELECT 'Tweety', '2003-05-05', 'Canary', 5, 14 WHERE NOT EXISTS (SELECT * FROM pets WHERE id=17);
+INSERT INTO pets (name, birth_date, breed, type_id, owner_id) SELECT 'Nibbles', '2007-09-12', 'Dutch Rabbit', 7, 15 WHERE NOT EXISTS (SELECT * FROM pets WHERE id=18);
+INSERT INTO pets (name, birth_date, breed, type_id, owner_id) SELECT 'Goldie', '2008-02-28', 'Goldfish', 9, 16 WHERE NOT EXISTS (SELECT * FROM pets WHERE id=19);
+INSERT INTO pets (name, birth_date, breed, type_id, owner_id) SELECT 'Charlie', '2005-11-03', 'Poodle', 2, 16 WHERE NOT EXISTS (SELECT * FROM pets WHERE id=20);
+INSERT INTO pets (name, birth_date, breed, type_id, owner_id) SELECT 'Mochi', '2009-06-15', 'Rex Rabbit', 7, 17 WHERE NOT EXISTS (SELECT * FROM pets WHERE id=21);
+INSERT INTO pets (name, birth_date, breed, type_id, owner_id) SELECT 'Pepper', '2006-08-20', 'Leopard Gecko', 3, 18 WHERE NOT EXISTS (SELECT * FROM pets WHERE id=22);
+INSERT INTO pets (name, birth_date, breed, type_id, owner_id) SELECT 'Coco', '2004-12-01', 'African Grey', 11, 19 WHERE NOT EXISTS (SELECT * FROM pets WHERE id=23);
+INSERT INTO pets (name, birth_date, breed, type_id, owner_id) SELECT 'Rocky', '2003-04-18', 'Rottweiler', 2, 20 WHERE NOT EXISTS (SELECT * FROM pets WHERE id=24);
+INSERT INTO pets (name, birth_date, breed, type_id, owner_id) SELECT 'Daisy', '2007-07-07', 'Holland Lop', 7, 20 WHERE NOT EXISTS (SELECT * FROM pets WHERE id=25);
+INSERT INTO pets (name, birth_date, breed, type_id, owner_id) SELECT 'Shadow', '2005-10-31', 'American Shorthair', 1, 11 WHERE NOT EXISTS (SELECT * FROM pets WHERE id=26);
 
 INSERT INTO visits (pet_id, visit_date, description) SELECT 7, '2010-03-04', 'rabies shot' WHERE NOT EXISTS (SELECT * FROM visits WHERE id=1);
 INSERT INTO visits (pet_id, visit_date, description) SELECT 8, '2011-03-04', 'rabies shot' WHERE NOT EXISTS (SELECT * FROM visits WHERE id=2);
 INSERT INTO visits (pet_id, visit_date, description) SELECT 8, '2009-06-04', 'neutered' WHERE NOT EXISTS (SELECT * FROM visits WHERE id=3);
 INSERT INTO visits (pet_id, visit_date, description) SELECT 7, '2008-09-04', 'spayed' WHERE NOT EXISTS (SELECT * FROM visits WHERE id=4);
+INSERT INTO visits (pet_id, visit_date, description) SELECT 14, '2015-03-01', 'annual checkup' WHERE NOT EXISTS (SELECT * FROM visits WHERE id=5);
+INSERT INTO visits (pet_id, visit_date, description) SELECT 15, '2016-04-15', 'vaccination' WHERE NOT EXISTS (SELECT * FROM visits WHERE id=6);
+INSERT INTO visits (pet_id, visit_date, description) SELECT 16, '2017-05-10', 'health examination' WHERE NOT EXISTS (SELECT * FROM visits WHERE id=7);
+INSERT INTO visits (pet_id, visit_date, description) SELECT 14, '2015-06-20', 'dental cleaning' WHERE NOT EXISTS (SELECT * FROM visits WHERE id=8);
