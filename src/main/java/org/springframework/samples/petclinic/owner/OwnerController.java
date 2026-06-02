@@ -15,6 +15,7 @@
  */
 package org.springframework.samples.petclinic.owner;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -52,8 +53,16 @@ class OwnerController {
 
 	private final OwnerRepository owners;
 
-	public OwnerController(OwnerRepository owners) {
+	private final CountryRepository countries;
+
+	public OwnerController(OwnerRepository owners, CountryRepository countries) {
 		this.owners = owners;
+		this.countries = countries;
+	}
+
+	@ModelAttribute("countries")
+	public Collection<Country> populateCountries() {
+		return this.countries.findAll();
 	}
 
 	@InitBinder
