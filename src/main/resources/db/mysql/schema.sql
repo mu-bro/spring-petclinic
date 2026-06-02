@@ -25,14 +25,22 @@ CREATE TABLE IF NOT EXISTS types (
   INDEX(name)
 ) engine=InnoDB;
 
+CREATE TABLE IF NOT EXISTS countries (
+  id INT(4) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(80),
+  INDEX(name)
+) engine=InnoDB;
+
 CREATE TABLE IF NOT EXISTS owners (
   id INT(4) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
   first_name VARCHAR(30),
   last_name VARCHAR(30),
   address VARCHAR(255),
   city VARCHAR(80),
+  country_id INT(4) UNSIGNED,
   telephone VARCHAR(20),
-  INDEX(last_name)
+  INDEX(last_name),
+  FOREIGN KEY (country_id) REFERENCES countries(id)
 ) engine=InnoDB;
 
 CREATE TABLE IF NOT EXISTS pets (
